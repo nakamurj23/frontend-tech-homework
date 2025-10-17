@@ -21,10 +21,10 @@ function handleInput() {
     }
     // check boolean
     if (isPalindrome) {
-      output.innerHTML = "Yes, this is a palindrome!";
+      output.innerHTML = "Yes. this is a palindrome!";
       output.style.color = "green";
     } else {
-      output.innerHTML = "No, this is not a palindrome!";
+      output.innerHTML = "No. this is not a palindrome!";
       output.style.color = "red";
     }
   } else {
