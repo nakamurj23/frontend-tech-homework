@@ -6,18 +6,52 @@
     <title>02 - Search</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
     <script defer src="02-data.js"></script>
     <script defer src="02-search.js"></script>
+    <style>
+      body {
+        background-color: black;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      main {
+        background-color: white;
+        border-radius: 5px;
+        padding: 2rem;
+        width: 90%;
+        max-width: 600px;
+        text-align: center;
+      }
+      h1 {
+        padding-top: 10px;
+        text-align: center;
+      }
+      input {
+        margin: 0 10px;
+      }
+      mark {
+        padding: 0;
+      }
+    </style>
   </head>
   <body>
     <main>
       <h1>Exercise 02 - Search</h1>
-      <div>
-        <label for="userInput">Search: </label>
-        <input type="text" id="userInput" />
-        <input type="button" value="Search Character: " />
+      <div class="d-flex justify-content-center mb-4">
+        <label class="visually-hidden" for="userInput">Search characters</label>
+        <input class="form-control w-50" type="text" id="userInput" />
+        <button type="button" class="btn btn-primary" id="searchBtn">
+          Search
+        </button>
       </div>
+      <div
+        id="resultsDiv"
+        class="d-flex flex-wrap justify-content-center gap-3 mt-3"
+      ></div>
     </main>
   </body>
 </html>
