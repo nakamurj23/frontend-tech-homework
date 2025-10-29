@@ -7,14 +7,134 @@
     <title>05 - Form</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
     <script defer src="05-form.js"></script>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e2328;
+      }
+      main {
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      .modal-body {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+    </style>
   </head>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <body>
     <main>
-      <form>
+      <form id="form">
         <h1>Exercise 05 - Form</h1>
+        <div class="form-group">
+          <label for="inputName" class="form-label fw-bold mt-3"
+            >Full Name:</label
+          >
+          <input type="text" class="form-control" id="inputName" />
+        </div>
+        <div class="form-group">
+          <label for="inputEmail" class="form-label fw-bold mt-3">Email:</label>
+          <input type="email" class="form-control" id="inputEmail" />
+        </div>
+        <div class="form-group">
+          <label for="registrationStatus" class="form-label fw-bold mt-3"
+            >Registration Status:</label
+          >
+          <select class="form-select" id="registrationStatus">
+            <option value="">Choose an Option</option>
+            <option value="Full-time">Full-time</option>
+            <option value="Part-time">Part-time</option>
+            <option value="N/A">Not a student</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <legend class="form-label fw-bold mt-3 fs-6">
+            Have you taken any of the following courses?
+          </legend>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Programming Languages"
+              id="programmingLanguages"
+            />
+            <label class="form-check-label" for="programmingLanguages">
+              Programming Languages
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Operating Systems"
+              id="OS"
+            />
+            <label class="form-check-label" for="OS"> Operating Systems </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Full Stack Web Development"
+              id="FsWebDev"
+            />
+            <label class="form-check-label" for="FsWebDev">
+              Full Stack Web Development
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label fw-bold mt-3" for="textArea"
+            >Anything else?</label
+          >
+          <textarea class="form-control" id="textArea" rows="3"></textarea>
+        </div>
+        <div class="form-group mt-3">
+          <div class="btn-group w-100 gap-1">
+            <button type="submit" class="btn btn-primary w-50">Submit</button>
+            <button type="reset" class="btn btn-secondary w-50" id="ResetBtn">
+              Reset
+            </button>
+          </div>
+        </div>
       </form>
+      <div class="modal fade" id="formModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Student Info:</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
